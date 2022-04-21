@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
                 R.id.thirdFragment -> {
-
+                    // Daasdadk
                 }
             }
         }
