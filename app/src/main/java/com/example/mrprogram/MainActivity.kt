@@ -1,13 +1,14 @@
 package com.example.mrprogram
 
 import android.os.Bundle
+import android.os.Message
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mrprogram.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,16 +16,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bottomNavigationBar.setOnNavigationItemReselectedListener {
-            when(it.itemId){
+            when (it.itemId) {
 
                 R.id.firstFragment -> {
-                    supportFragmentManager.beginTransaction().replace(binding.fragmentHolder.id, FirstFragment()).commit()
+                    supportFragmentManager.beginTransaction()
+                        .replace(binding.fragmentHolder.id, FirstFragment()).commit()
                 }
                 R.id.secondFragment -> {
 
                 }
                 R.id.thirdFragment -> {
                     // Daasdadk
+
+
                 }
             }
         }
